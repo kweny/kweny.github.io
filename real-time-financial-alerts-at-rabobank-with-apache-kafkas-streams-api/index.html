@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://kweny.io">
-  <title>Archives | K栈</title>
+  <title>[译] 流式处理：使用 Apache Kafka 的 Streams API 实现 Rabobank 的实时财务告警 | K栈</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="K栈">
-<meta property="og:url" content="http://kweny.io/archives/index.html">
+  <meta name="description" content="原文：Real-time Financial Alerts at Rabobank with Apache Kafka’s Streams API原作者：Jeroen van Disseldorp 本文讨论使用 Apache Kafka 的 Streams API 向 Rabobank 的客户发送告警。Rabobank（荷兰合作银行）总部位于荷兰，在全球拥有 900 多个分支机构，48,000 名">
+<meta name="keywords" content="Kafka,架构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[译] 流式处理：使用 Apache Kafka 的 Streams API 实现 Rabobank 的实时财务告警">
+<meta property="og:url" content="http://kweny.io/real-time-financial-alerts-at-rabobank-with-apache-kafkas-streams-api/index.html">
 <meta property="og:site_name" content="K栈">
+<meta property="og:description" content="原文：Real-time Financial Alerts at Rabobank with Apache Kafka’s Streams API原作者：Jeroen van Disseldorp 本文讨论使用 Apache Kafka 的 Streams API 向 Rabobank 的客户发送告警。Rabobank（荷兰合作银行）总部位于荷兰，在全球拥有 900 多个分支机构，48,000 名">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://kweny.io/figures/rabobank-raboalerts_mobile-banking.png">
+<meta property="og:image" content="http://kweny.io/figures/rabobank-raboalerts_alerting-topology-flow.jpg">
+<meta property="og:updated_time" content="2018-11-24T19:31:38.870Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="K栈">
+<meta name="twitter:title" content="[译] 流式处理：使用 Apache Kafka 的 Streams API 实现 Rabobank 的实时财务告警">
+<meta name="twitter:description" content="原文：Real-time Financial Alerts at Rabobank with Apache Kafka’s Streams API原作者：Jeroen van Disseldorp 本文讨论使用 Apache Kafka 的 Streams API 向 Rabobank 的客户发送告警。Rabobank（荷兰合作银行）总部位于荷兰，在全球拥有 900 多个分支机构，48,000 名">
+<meta name="twitter:image" content="http://kweny.io/figures/rabobank-raboalerts_mobile-banking.png">
   
     <link rel="alternative" href="/atom.xml" title="K栈" type="application/atom+xml">
   
@@ -170,195 +178,195 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-real-time-financial-alerts-at-rabobank-with-apache-kafkas-streams-api" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/carefree-mongodb-spring-boot-starter/" class="archive-article-date">
-  	<time datetime="2018-09-20T12:31:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/carefree-mongodb-spring-boot-starter/">[Carefree MongoDB] Spring Boot MongoDB 自动化配置</a>
+    <h1 class="article-title" itemprop="name">
+      [译] 流式处理：使用 Apache Kafka 的 Streams API 实现 Rabobank 的实时财务告警
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MongoDB</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Carefree</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/开源软件//" class="article-tag-list-link color5">开源软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/mongodb-client-connection-options/" class="archive-article-date">
-  	<time datetime="2018-09-12T18:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/mongodb-client-connection-options/">MongoDB 客户端连接选项</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MongoDB</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/笔记手册//" class="article-tag-list-link color5">笔记手册</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/design-patterns-research-overview/" class="archive-article-date">
-  	<time datetime="2018-04-25T18:52:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/design-patterns-research-overview/">[设计模式注疏] 软件设计的质、门、道</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/软件设计//" class="article-tag-list-link color5">软件设计</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/软件设计/设计模式注疏//" class="article-tag-list-link color2">设计模式注疏</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/real-time-financial-alerts-at-rabobank-with-apache-kafkas-streams-api/" class="archive-article-date">
+        
+        <a href="/real-time-financial-alerts-at-rabobank-with-apache-kafkas-streams-api/" class="archive-article-date">
   	<time datetime="2018-04-17T14:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/real-time-financial-alerts-at-rabobank-with-apache-kafkas-streams-api/">[译] 流式处理：使用 Apache Kafka 的 Streams API 实现 Rabobank 的实时财务告警</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原文：<a href="https://www.confluent.io/blog/real-time-financial-alerts-rabobank-apache-kafkas-streams-api/" target="_blank" rel="noopener">Real-time Financial Alerts at Rabobank with Apache Kafka’s Streams API</a><br>原作者：<a href="https://www.confluent.io/blog/author/jeroen/" target="_blank" rel="noopener">Jeroen van Disseldorp</a></p>
+<p><em>本文讨论使用 Apache Kafka 的 Streams API 向 Rabobank 的客户发送告警。Rabobank（荷兰合作银行）总部位于荷兰，在全球拥有 900 多个分支机构，48,000 名员工和 681 亿欧元的资产。Rabobank 是一家由客户和银行组成的合作银行，一家对社会负责的银行。其目标是成为荷兰金融市场的领导者。Rabobank 还致力于成为全球食品和农业领域的领先银行。Rabobank 向全球数百万客户提供金融产品和服务。</em></p>
+<a id="more"></a>
+<p>在过去的几年中，Rabobank 一直在为成为一家实时的，事件驱动的银行而进行积极的投资。如果你熟悉银行的业务流程，应该会明白这并不能一蹴而就。许多银行业务流程都是在非商用硬件上以批处理作业的形式进行的，因此迁移工作非常艰巨。但如前所述，Rabobank 接受了这一挑战<br>，并定义了一个<a href="https://www.slideshare.net/JeroenvanDisseldorpM/kafka-utrecht-meetup" target="_blank" rel="noopener">业务事件总线</a>（BEB，Business Event Bus），用于应用程序之间共享整个组织架构的业务事件。<br>Rabobank 选择 Apache Kafka 作为底层的主要引擎，并编写了自己的的 BEB 客户端库，以方便应用程序开发人员使用简单的消息生产/消费以及灾难恢复等功能。</p>
+<p>Rabobank 采用 <a href="https://drive.google.com/file/d/0BwQ3-QDawhABek5hVWNzbXZ3dFU/view" target="_blank" rel="noopener"><code>Active-Active</code> 的 Kafka 设置</a>，Kafka 集群在多个数据中心进行对称镜像。当数据中心出现故障或由操作人员干预后，BEB 客户端（包括本文讨论的基于 Kafka Streams 的应用程序）会切换到另一个 Kafka 集群，而无需重新启动。实现在灾难情景和计划维护时段内的 24×7 不间断运行。BEB 客户端库为生产者、消费者以及流式应用提供了这种切换机制。</p>
+<p><strong>Rabo Alerts</strong> 是一个由一系列生产、消费、流式消息等微服务组成的系统，基于 BEB 实现。下面讨论的所有数据类型和代码都可以在 <a href="https://github.com/Axual/rabo-alerts-blog-post" target="_blank" rel="noopener">GitHub</a> 中找到。本文将在一定程度上简化源码清单（如删除未使用的字段），但这些清单仍反映了生产中实际运行的代码。</p>
+<h2 id="案例：Rabo-Alerts"><a href="#案例：Rabo-Alerts" class="headerlink" title="案例：Rabo Alerts"></a>案例：Rabo Alerts</h2><p>Rabo Alerts 服务可以让 Rabobank 的客户接收其关注的财务事件告警。例如某笔款项从账户中扣除或者记入账户，以及其它更复杂的事件。客户可以根据自己的偏好配置告警，并通过第三方渠道发送：如电子邮件、短信和移动推送通知。值得一提的是，Rabo Alerts 并不是一项新的或试用服务，它已经投产十多年，可供数百万账户持有者使用。</p>
+<h2 id="面临的问题"><a href="#面临的问题" class="headerlink" title="面临的问题"></a>面临的问题</h2><p>旧的 Rabo Alerts 实现主要是在大型机系统上。所有的处理步骤都是面向批处理的，大型机会根据告警类型派生告警，并每隔几分钟发送，但每天只发送几次。这种实现非常稳定可靠，但 Rabobank 希望解决两个问题：（1）灵活性不足；（2）告警发送速度慢。</p>
+<p>由于对现有告警进行更改或添加新（更智能）的告警需要很大的工作量，因此旧的 Rabo Alerts 对<strong>适应新业务需求的灵活性很低</strong>。在过去几年中，Rabobank 在其在线环境中引入新功能的步伐大幅增加，旧有僵化的告警解决方案变得越来越成问题。</p>
+<p><strong>告警的传递速度</strong>也是一个问题，旧的 Rabo Alerts 可能需要 5 分钟到 4-5 小时才能向用户发送告警（取决于告警类型和批处理窗口）。如果在十年前，这个速度可能足够快了，但如今客户的期望值要高得多。现在 Rabobank 向客户提供“相关信息”的时间窗口要比过去十年小得多。</p>
+<p>因此，如何重新设计现有的机制，使其具有更强的扩展性及更快的速度，便是摆在眼前的问题。当然，重新设计的 Rabo Aerts 也需要稳定可靠，以便能够正确地为现有数百万的用户群提供服务。</p>
+<h2 id="从小处着手"><a href="#从小处着手" class="headerlink" title="从小处着手"></a>从小处着手</h2><p>在过去的一年里，我们一直使用 Kafka 及其 Streams API 重新设计和实现告警机制。由于整个 Rabo Alerts 服务相当庞大，我们决定从四个简单但使用率高的告警开始：</p>
+<ul>
+<li>余额高于阈值</li>
+<li>余额低于阈值</li>
+<li>超过阈值的贷记（Credit）</li>
+<li>超过阈值的借记（Debit）</li>
+</ul>
+<p>这些告警的每一个都可以从当前账户系统的支付信息流中派生出来。例如：“当我的余额低于 100 欧元时向我发送短信”或“当有人给我超过 1000 欧元时向我推送消息”（通常用于存款通知）。</p>
+<p>以下截图说明如何通过手机银行 app 配置 Rabo Alerts ——</p>
+<p><img src="/figures/rabobank-raboalerts_mobile-banking.png" alt="raboalerts-mobile-banking.png-157.5kB"></p>
+<h2 id="告警拓扑"><a href="#告警拓扑" class="headerlink" title="告警拓扑"></a>告警拓扑</h2><p>我们的第一步是重新设计告警过程，基本流程如下：</p>
+<ol>
+<li>挖掘来自支付工厂的交易流，产生一连串的 AccountEntry（账户会计条目）。注意，每一个支付交易总是由两个 AccountEntry 组成，即借记（Debit）和贷记（Credit）。</li>
+<li>对每个 AccountEntry 执行以下步骤：<ul>
+<li>a. 将具有账户读取权限的账号转换为一个客户列表。</li>
+<li>b. 对每个客户执行以下步骤：<ul>
+<li>i. 查看客户是否为给定账号配置了 Rabo Alert。</li>
+<li>ii. 如果是，检查此 AccountEntry 是否符合客户设置的告警条件。</li>
+<li>iii. 如何符合，通过客户配置的渠道（电子邮件、短信、消息推送）发送告警。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>步骤 1 需要与执行交易的核心银行系统建立链接。<br>步骤 2a 需要建立一个查询表，其中包含所有账户的所有客户权限。<br>步骤 2b 需要建立一个查询表，其中包含所有客户的 Rabo Alert 设置。</p>
+<p>该流程的使用及其需求见下图：</p>
+<p><img src="/figures/rabobank-raboalerts_alerting-topology-flow.jpg" alt="raboalerts-alerting-topology-flow.jpg-77.8kB"></p>
+<p>图中所有白色框都是 Kafka 主题（Topic），其中列出了它们的 Avro 键/值数据类型。大部分数据类型都是不言自明的，但以下数据类型值得一提：</p>
+<ul>
+<li><strong>CustomerAlertSettings</strong>：特定客户的告警设置，这些设置包括：<ul>
+<li><strong>CustomerAlertAddresses</strong>：客户用于接收告警消息的渠道及地址列表。移动推送地址此处以 <code>CustormerId</code> 表示，因为注册移动设备的实际列表是在消息发送过程中确定的。</li>
+<li><strong>CustomerAccountAlertSettings</strong>：客户为特定账户设定的告警配置列表。这个列表指定了客户希望接收特定账户的哪些告警及其阈值。</li>
+</ul>
+</li>
+<li><strong>ChannelType</strong>：可用的渠道类型枚举，当前为 EMAIL、PUSH 和 SMS。</li>
+<li><strong>AccountEntry</strong>：一条支付账户的会计记账。一个记账条目是一个支付交易的一半，可以是一个借记条目（Debit），也可以是一个贷记条目（Credit）。</li>
+<li><strong>OutboundMessage</strong>：发送给客户的消息内容。包含消息类型和参数，但不包含其寻址。这些信息由 <code>Outbound</code> topic 的 Key 承载。</li>
+</ul>
+<p>蓝色框表示独立的应用程序（或称微服务），是使用 Spring Boot 实现的可执行 jar，并部署在托管平台上。它们一起组成了实现 Rabo Alerts 的所有必要功能：</p>
+<ul>
+<li><strong>Alert Settings Manager</strong>：告警配置管理器。向一个 <code>compacted topic</code> （开启了 Log Compaction 的 Kafka 主题）发布每个客户的所有自定义告警设置。</li>
+<li><strong>Account Authorization Manager</strong>：账户授权管理器。账户并不是和客户一对一绑定，而是可以由不同的用户查看。例如，配偶之间共享账户；或企业账户针对不同员工的不同授权。这些情况下可能会产生任意的账户/用户间的授权关系。该应用程序向一个 <code>compacted topic</code> 发布账号和授权客户ID的关系。它是实时的，以便授权的变化在发送告警时能立即生效。</li>
+<li><strong>Account Entry Bridge</strong>：通过 IBM MQ 从 Rabobank 基于大型机的支付工厂中检索所有支付流，并转发到 Kafka 的 topic。</li>
+<li><strong>Alerting</strong>：核心告警服务，参见下文。</li>
+<li><strong>Device Resolver</strong>：设备解析器，辅助应用。从外部系统查找所有客户的移动设备，并将相同的告警消息写入各个设备对应的 topic 中（PushId）。客户移动设备的查找可以通过一个 <code>compacted topic</code> 完成，但由于各种不同的原因，此处是通过远程服务调用的方式实现的。</li>
+<li><strong>Senders</strong>：每一个 Sender 消费其绑定的渠道 topic 的消息，并发送给寻址客户。每种渠道都被分配了各自的 Kafka topic，以使各种渠道的故障能彼此分离。例如，当电子邮件服务器关闭时，告警消息依然可以通过消息推送的方式发送出去。</li>
+</ul>
+<h2 id="废话少说，放码过来"><a href="#废话少说，放码过来" class="headerlink" title="废话少说，放码过来"></a>废话少说，放码过来</h2><p>使用 Kafka Streams 编码实现告警只需要 2 个类。</p>
+<p>第一个类是 <code>BalanceAlertsTopology</code>。这个类使用给定的 <code>KStreamBuilder</code> 定义主要的 Kafka Streams 拓扑（Topology）。它实现了 BEB 的 <code>TopologyFactory</code>，是一个 BEB 客户端库使用的自定义接口，用于在应用程序启动后或 Kafka 集群切换（如数据中心切换/故障转移）时生成新的 Kafka Streams Topology。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">KStream&lt;CustomerId, KeyValue&lt;SpecificRecord, OutboundMessage&gt;&gt; addressedMessages =</span><br><span class="line">    builder.&lt;AccountId, AccountEntry&gt;stream(accountEntryStream)</span><br><span class="line">        .leftJoin(accountToCustomerIds, (accountEntry, customerIds) -&gt; &#123;</span><br><span class="line">          <span class="keyword">if</span> (isNull(customerIds)) &#123;</span><br><span class="line">            <span class="keyword">return</span> Collections.&lt;KeyValue&lt;CustomerId, AccountEntry&gt;&gt;emptyList();</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> customerIds.getCustomerIds().stream()</span><br><span class="line">                .map(customerId -&gt; KeyValue.pair(customerId, accountEntry))</span><br><span class="line">                .collect(toList());</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        .flatMap((accountId, accountentryByCustomer) -&gt; accountentryByCustomer)</span><br><span class="line">        .through(customerIdToAccountEntryStream)</span><br><span class="line">        .leftJoin(alertSettings, Pair::with)</span><br><span class="line">        .flatMapValues(</span><br><span class="line">            (Pair&lt;AccountEntry, CustomerAlertSettings&gt; accountEntryAndSettings) -&gt;</span><br><span class="line">                BalanceAlertsGenerator.generateAlerts(</span><br><span class="line">                    accountEntryAndSettings.getValue0(),</span><br><span class="line">                    accountEntryAndSettings.getValue1())</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line"><span class="comment">// Send all Email messages from addressedMessages</span></span><br><span class="line">addressedMessages</span><br><span class="line">    .filter((e, kv) -&gt; kv.key <span class="keyword">instanceof</span> EmailAddress)</span><br><span class="line">    .map((k, v) -&gt; v)</span><br><span class="line">    .to(emailMessageStream);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Send all Sms messages from addressedMessages</span></span><br><span class="line">addressedMessages</span><br><span class="line">    .filter((e, kv) -&gt; kv.key <span class="keyword">instanceof</span> PhoneNumber)</span><br><span class="line">    .map((k, v) -&gt; v)</span><br><span class="line">    .to(smsMessageStream);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Send all Push messages from addressedMessages</span></span><br><span class="line"><span class="comment">// (CustomerId is later resolved to a list of customer's mobile devices)</span></span><br><span class="line">addressedMessages</span><br><span class="line">    .filter((e, kv) -&gt; kv.key <span class="keyword">instanceof</span> CustomerId)</span><br><span class="line">    .map((k, v) -&gt; v)</span><br><span class="line">    .to(customerPushMessageStream);</span><br></pre></td></tr></table></figure>
+<p>该 Topology 定义了以下几个步骤：</p>
+<ul>
+<li>1-13 行，从消费 AccountEntry 流开始，当检索到一个 AccountEntry 时，会查找哪些客户有权访问该账户，并将结果存储在一个中间 topic 中，以 <code>CustomerId</code> 为 Key，<code>AccountEntry</code> 为 Value。该 topic 的意思是“这个客户（Key）的这个 AccountEntry（Value）需要处理”。</li>
+<li>14-20 行，针对每个客户执行。检查客户的告警设置，如果 AccountEntry 符合客户的告警设置，会要求辅助类生成 <code>OutboundMessage</code>。</li>
+<li>22-39 行，遍历所有的 <code>OutboundMessage</code>，并将它们分配到各自的渠道 topic。</li>
+</ul>
+<p>告警消息是在 17 行调用辅助类 <code>BalanceAlertsGenerator</code> 生成的。其主要方法是 <code>generateAlerts()</code>，该方法获取一个 AccountEntry，并从具有该账户查看权限的客户中获取告警配置。以下是它的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;KeyValue&lt;SpecificRecord, OutboundMessage&gt;&gt; generateAlerts(AccountEntry accountEntry,</span><br><span class="line">                                                                             CustomerAlertSettings settings) &#123;</span><br><span class="line">      <span class="comment">/* 使用告警设置为一个 AccountEntry 生成完成寻址的告警，步骤如下：</span></span><br><span class="line"><span class="comment">      *  1) 使用特定账户的告警设置，过滤掉不属于该账户的 AccountEntry</span></span><br><span class="line"><span class="comment">      *  2) 匹配告警设置中的每一项设置，生成适当的消息</span></span><br><span class="line"><span class="comment">      *  3) 为生成的消息添加寻址信息</span></span><br><span class="line"><span class="comment">      */</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (settings == <span class="keyword">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> settings.getAccountAlertSettings().stream()</span><br><span class="line">      .filter(accountAlertSettings -&gt; matchAccount(accountEntry, accountAlertSettings))</span><br><span class="line">      .flatMap(accountAlertSettings -&gt; accountAlertSettings.getSettings().stream())</span><br><span class="line">      .flatMap(accountAlertSetting -&gt; Stream.of(</span><br><span class="line">          generateBalanceAbove(accountEntry, accountAlertSetting),</span><br><span class="line">          generateBalanceBelow(accountEntry, accountAlertSetting),</span><br><span class="line">          generateCreditedAbove(accountEntry, accountAlertSetting),</span><br><span class="line">          generateDebitedAbove(accountEntry, accountAlertSetting))</span><br><span class="line">      )</span><br><span class="line">      .filter(Optional::isPresent).map(Optional::get)</span><br><span class="line">      .flatMap(messageWithChannels -&gt; mapAddresses(messageWithChannels.getValue0(), settings.getAddresses())</span><br><span class="line">          .map(address -&gt; KeyValue.pair(address, messageWithChannels.getValue1())))</span><br><span class="line">      .collect(toList());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>该方法执行以下步骤：</p>
+<ul>
+<li>13 行，流化所有账户相关的告警设置（一个账户一个对象）。</li>
+<li>14 行，将告警设置中的账号和 AccountEntry 中的账号进行匹配。</li>
+<li>15 行，流化告警设置中的各项设置。</li>
+<li>16-21 行，构造要发送的一系列消息，以及用于发送消息的渠道列表（这里对每种告警类型都使用了单独的方法），结果是一个 <code>Pair&lt;List, OutboundMessage&gt;</code> 流。</li>
+<li>22 行，过滤空结果。</li>
+<li>23-24 行，为指定渠道查找客户地址，并返回一个 <code>KeyValue&lt;address, OutboundMessage&gt;</code> 流。</li>
+<li>25 行，收集所有结果，并作为 <code>List</code> 返回。</li>
+</ul>
+<p>这个类的其它辅助方法：</p>
+<ul>
+<li><code>matchAccount()</code>：通过比较账号和币种，来匹配 AccountEntry 和账户告警设置。</li>
+<li><code>generateBalanceAbove/Below()</code>：生成 <code>BalanceAbove/Below</code> 告警消息（余额高于/低于阈值）。</li>
+<li><code>generateDebited/CreditedAbove()</code>：生成 <code>Debited/CreditedAbove</code> 告警消息（超出阈值的借记/贷记）。</li>
+<li><code>mapAddresses()</code>：查找指定渠道列表的客户告警接收地址。</li>
+<li><code>buildMessage()</code>：构建一个 <code>OutboundMessage</code>。</li>
+</ul>
+<p>再加上一些其它额外的类来将这个功能包装在一个独立的应用程序中，这就是它的全部功能！</p>
+<h2 id="第一次测试运行"><a href="#第一次测试运行" class="headerlink" title="第一次测试运行"></a>第一次测试运行</h2><p>在第一次的初步实现后，我们进行了测试运行。事实令我们惊讶，并且期望值高涨。从支付订单确认到移动设备收到告警的整个过程只需要一到两秒钟，且一秒的情况居多。这个过程还包括了支付工厂所花费的时间（验证支付订单，交易处理），因此响应时间可能会依当时的支付工厂工作量而有所不同。整个告警链——从 AccountEntry 在 Kafka 上发布，到将消息推送给客户——通常在 120 毫秒内完成。在发送阶段，推送（PUSH）告警是最快的，仅需 100-200 毫秒即可到达客户的移动设备。电子邮件（EMAIL）和短信（SMS）稍慢，通常在发出消息后的 2-4 秒到达。相比之下，旧有的体系通常需要几分钟的时间才能提供告警。</p>
+<p>下面的视频演示了使用我的个人测试账户进行告警传输的速度。请注意，虽然是测试用的，但这也是一个正常运行的 Rabobank 支付账户！</p>
+<p>【只是一段演示视频，markdown 插入视频比较麻烦，原文看吧，或看下面的文字解说】</p>
+<p>首先我在我的设备上启用了告警，并配置了阈值为 0 的 DebitedAboveThreshold 告警（“More withdrawn than”）。这意味着超过 0 欧元的任何支付都会向我发送告警。我设置了 PUSH 和 SMS 两种渠道告警（视频中未演示），因此告警会通过两个渠道发给我。保存设置并返回主屏幕后，我开始向我的同事 Joris Meijer 转账 1 欧元，并通过指纹验证。之后付款订单被发送到支付工厂进行处理。在订单确认关闭之前，推送（PUSH）告警已经在屏幕顶部弹出，如通知窗口所示。几秒钟后，相同的告警消息也以 SMS 的方式到达。</p>
+<h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><p>新机制简洁而优雅，只需要少数 Java 类组成。这个逻辑大约四个星期写完，但要使整个拓扑工作需要大约六个月的时间。这主要是因为 <code>Alert Settings Manager</code>、<code>Account Authorizations Manager</code> 以及 <code>Account Entry Bridge</code> 需要和银行的其它业务模块达成一致。</p>
+<p>在团队内部的告警测试之后，需要更彻底更大规模的测试。毕竟我们希望确保客户不会错过告警或接收到不该接收告警。我们选用了 25,000 名 Rabobank 的员工作为试点小组，对这个新机制进行了为期两个月的试用。这样可以更好的观察系统在生产数据及高负载下的运行表现。另外，Rabobank 的员工比付费客户更能容忍告警失败（有时确实会失败）的情况。在试用期间，我们优化了告警生成并消除了一些外围应用的边界错误。</p>
+<p>经批准，新体系于 6 月 8 日上线为数百万 Rabobank 客户提供服务。这对我们来说是非常激动人心的时刻——不仅因为它有效，而且因为我们永远不可能回头。我们通过延迟几秒而不是几分钟或几小时的告警，有效提升了客户的期望值。如果由于某种原因导致某个组件服务失败，客户会立即注意到，因为告警会延迟。因此我们密切关注这套体系，但到目前为止，它一直运行良好且可预测。</p>
+<h2 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h2><p>新体系提供了实时告警，且易于扩展，满足了 Rabobank 对于速度和灵活性的要求。但这里提到的四种告警类型并不是全部。客户还可以配置其它约 10 种告警，例如“当我收到来自指定账户的付款时提醒我”和“当付款单无法执行时提醒我”。下一步是将这些告警从大型机迁移到新体系，但这需要连接更多的支付系统，例如支付订单执行引擎。我们将在未来的几个月为此努力，且不会止于此，新的实现也激发了大量新的想法，我们将很快公开讨论（甚至展示）。</p>
+<h2 id="关于作者"><a href="#关于作者" class="headerlink" title="关于作者"></a>关于作者</h2><p>Jeroen van Disseldorp 是位于荷兰的 Confluent 合作伙伴公司 <a href="https://axual.io/" target="_blank" rel="noopener">Axual</a> 的创始人。Axual 为企业应用提供基于 Apache Kafka 的实时数据解决方案。<br>Email：<a href="mailto:jeroen@axual.io" target="_blank" rel="noopener">jeroen@axual.io</a><br>Twitter：<a href="https://twitter.com/axual" target="_blank" rel="noopener">@axual</a><br>LinkedIn：<a href="http://linkedin.com/in/dizzl" target="_blank" rel="noopener">http://linkedin.com/in/dizzl</a></p>
+<h2 id="关于-Apache-Kafka-Streams-API"><a href="#关于-Apache-Kafka-Streams-API" class="headerlink" title="关于 Apache Kafka Streams API"></a>关于 Apache Kafka Streams API</h2><p>如果你喜欢本文，可能会希望继续使用以下资源了解有关 Apache Kafka Streams API 的更多信息：</p>
+<ul>
+<li><a href="https://kafka.apache.org/documentation/streams/" target="_blank" rel="noopener">Get started with the Kafka Streams API</a>：构建自己的实时应用和微服务。</li>
+<li><a href="https://docs.confluent.io/current/streams/kafka-streams-examples/docs/index.html" target="_blank" rel="noopener">Confluent tutorial for the Kafka Streams API with Docker</a> 和 <a href="https://github.com/confluentinc/kafka-streams-examples" target="_blank" rel="noopener">Confluent demo applications</a></li>
+</ul>
+<h2 id="译者按"><a href="#译者按" class="headerlink" title="译者按"></a>译者按</h2><p>本文讨论了一种架构思路的实现案例：数据的流式处理。这种思路好比将数据放到一条流水线中，经过一道道环节的加工处理，每一道环节都可能从数据中提取需要的信息，或向数据中写入一些特定的内容。而这条流水线中的每个环节都可能形成一条子流水线，将该环节关心的数据从原始数据中提取出来，放到子流水线中加工处理。当数据从流水线的终点出来后，将会是一个包含更丰富内容的数据，或者其中的有价值内容已经被各个环节提取完毕。</p>
+<h2 id="关于译文"><a href="#关于译文" class="headerlink" title="关于译文"></a>关于译文</h2><p>本译文经原作者授权后，首发于 <a href="http://kweny.io">K栈</a>。转载请注明<a href="https://www.confluent.io/blog/author/jeroen/" target="_blank" rel="noopener">原作者</a>以及<a href="https://www.confluent.io/blog/real-time-financial-alerts-rabobank-apache-kafkas-streams-api/" target="_blank" rel="noopener">原文</a>和<a href="http://kweny.io/real-time-financial-alerts-at-rabobank-with-apache-kafkas-streams-api/">译文</a>出处。</p>
+<hr>
 
-        <div class="article-info info-on-right">
+      
+
+      
+      
+        <div class="copyright">
+          <strong>本文作者：</strong>
           
+            <a href="/">Kweny</a>
+          
+          <br>
+          <strong>本文链接：</strong>
+          http://kweny.io/real-time-financial-alerts-at-rabobank-with-apache-kafkas-streams-api/
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+          进行许可。转载请注明出处！
+          
+        </div>
+      
+
+        
+          <div style="text-align: center;">
+            <div style="margin-top: 20px; margin-bottom: 20px;"><strong>K栈IO 公众号：<span>KwenyIO</span></strong></div>
+            <div><img src="/assets/mp-wechat-name-card.png"></div>
+        
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/reward-alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/reward-wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -374,7 +382,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -387,17 +395,121 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
   </div>
-</article>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://kweny.io/real-time-financial-alerts-at-rabobank-with-apache-kafkas-streams-api/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div></article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/design-patterns-research-overview/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          [设计模式注疏] 软件设计的质、门、道
+        
+      </div>
+    </a>
   
   
-    </div></section>
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#案例：Rabo-Alerts"><span class="toc-number">1.</span> <span class="toc-text">案例：Rabo Alerts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#面临的问题"><span class="toc-number">2.</span> <span class="toc-text">面临的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从小处着手"><span class="toc-number">3.</span> <span class="toc-text">从小处着手</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#告警拓扑"><span class="toc-number">4.</span> <span class="toc-text">告警拓扑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#废话少说，放码过来"><span class="toc-number">5.</span> <span class="toc-text">废话少说，放码过来</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一次测试运行"><span class="toc-number">6.</span> <span class="toc-text">第一次测试运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#回顾"><span class="toc-number">7.</span> <span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下一步"><span class="toc-number">8.</span> <span class="toc-text">下一步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于作者"><span class="toc-number">9.</span> <span class="toc-text">关于作者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于-Apache-Kafka-Streams-API"><span class="toc-number">10.</span> <span class="toc-text">关于 Apache Kafka Streams API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#译者按"><span class="toc-number">11.</span> <span class="toc-text">译者按</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于译文"><span class="toc-number">12.</span> <span class="toc-text">关于译文</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -420,8 +532,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://kweny.io">
-  <title>Archives | K栈</title>
+  <title>MongoDB 客户端连接选项 | K栈</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="K栈">
-<meta property="og:url" content="http://kweny.io/archives/index.html">
+  <meta name="description" content="基于 MongoDB Java Driver 3.8.1 的客户端配置选项，其它驱动大同小异。">
+<meta name="keywords" content="MongoDB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB 客户端连接选项">
+<meta property="og:url" content="http://kweny.io/mongodb-client-connection-options/index.html">
 <meta property="og:site_name" content="K栈">
+<meta property="og:description" content="基于 MongoDB Java Driver 3.8.1 的客户端配置选项，其它驱动大同小异。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-24T19:32:05.045Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="K栈">
+<meta name="twitter:title" content="MongoDB 客户端连接选项">
+<meta name="twitter:description" content="基于 MongoDB Java Driver 3.8.1 的客户端配置选项，其它驱动大同小异。">
   
     <link rel="alternative" href="/atom.xml" title="K栈" type="application/atom+xml">
   
@@ -170,93 +175,258 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-mongodb-client-connection-options" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/carefree-mongodb-spring-boot-starter/" class="archive-article-date">
-  	<time datetime="2018-09-20T12:31:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/carefree-mongodb-spring-boot-starter/">[Carefree MongoDB] Spring Boot MongoDB 自动化配置</a>
+    <h1 class="article-title" itemprop="name">
+      MongoDB 客户端连接选项
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MongoDB</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Carefree</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/开源软件//" class="article-tag-list-link color5">开源软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/mongodb-client-connection-options/" class="archive-article-date">
+        
+        <a href="/mongodb-client-connection-options/" class="archive-article-date">
   	<time datetime="2018-09-12T18:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-13</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/mongodb-client-connection-options/">MongoDB 客户端连接选项</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>基于 <a href="https://mongodb.github.io/mongo-java-driver/" target="_blank" rel="noopener">MongoDB Java Driver</a> 3.8.1 的客户端配置选项，其它驱动大同小异。</p>
+<a id="more"></a>
+<h2 id="description"><a href="#description" class="headerlink" title="description"></a>description</h2><p><code>java.lang.String</code></p>
+<p>客户端的描述。该描述用于日志记录和 JMX 等位置。</p>
+<p>默认为 null。</p>
+<h2 id="applicationName"><a href="#applicationName" class="headerlink" title="applicationName"></a>applicationName</h2><p><code>java.lang.String</code><br><code>Server Version: 3.4</code></p>
+<p>应用程序的逻辑名称。客户端可以据此标识应用程序服务器，用于服务器日志、慢查询日志及概要收集。</p>
+<p>默认为 null。</p>
+<h2 id="minConnectionsPerHost"><a href="#minConnectionsPerHost" class="headerlink" title="minConnectionsPerHost"></a>minConnectionsPerHost</h2><p><code>int</code></p>
+<p>每个主机的最小连接数，这些连接在空闲时将保持在连接池中。</p>
+<p>默认为 0，不能小于 0。</p>
+<h2 id="maxConnectionsPerHost"><a href="#maxConnectionsPerHost" class="headerlink" title="maxConnectionsPerHost"></a>maxConnectionsPerHost</h2><p><code>int</code></p>
+<p>每个主机允许的最大连接数，这些连接在空闲时将保持在连接池中。当连接池耗尽后，任何需要连接的操作都将被阻塞并等待可用连接。</p>
+<p>默认为 100，不能小于 1。</p>
+<h2 id="threadsAllowedToBlockForConnectionMultiplier"><a href="#threadsAllowedToBlockForConnectionMultiplier" class="headerlink" title="threadsAllowedToBlockForConnectionMultiplier"></a>threadsAllowedToBlockForConnectionMultiplier</h2><p><code>int</code></p>
+<p>允许阻塞的连接线程数乘数。该值和 <strong>maxConnectionsPerHost</strong> 相乘的结果就是连接等待队列的最大值，超出的线程将立即抛出异常。</p>
+<p>如该值为 5，maxConnectionsPerHost 为 10，则最多可以同时有 50 个线程等待连接。</p>
+<p>默认为 5，不能小于 1。</p>
+<h2 id="maxWaitTime"><a href="#maxWaitTime" class="headerlink" title="maxWaitTime"></a>maxWaitTime</h2><p><code>int</code></p>
+<p>线程从连接池中获取可用连接的最长等待时间（毫秒）。</p>
+<p>默认为 120,000（120秒），0 表示不等待，负值意味着无限期等待。</p>
+<h2 id="maxConnectionIdleTime"><a href="#maxConnectionIdleTime" class="headerlink" title="maxConnectionIdleTime"></a>maxConnectionIdleTime</h2><p><code>int</code></p>
+<p>连接池中连接的最大空闲时间（毫秒）。超出空闲时间的连接将被关闭，并在必要时由新建连接替换。</p>
+<p>默认为 0，表示无限制，不能小于 0。</p>
+<h2 id="maxConnectionLifeTime"><a href="#maxConnectionLifeTime" class="headerlink" title="maxConnectionLifeTime"></a>maxConnectionLifeTime</h2><p><code>int</code></p>
+<p>连接池中连接的最大使用寿命（毫秒）。超出使用寿命的连接将被关闭，并在必要时由新建连接替换。</p>
+<p>默认为 0，表示无限制，不能小于 0。</p>
+<h2 id="connectTimeout"><a href="#connectTimeout" class="headerlink" title="connectTimeout"></a>connectTimeout</h2><p><code>int</code></p>
+<p>连接超时时间（毫秒），仅在新建连接时使用。</p>
+<p>默认为 10,000（10秒），0 表示无限制，不能小于 0。</p>
+<h2 id="socketTimeout"><a href="#socketTimeout" class="headerlink" title="socketTimeout"></a>socketTimeout</h2><p><code>int</code></p>
+<p>socket 超时时间（毫秒），用于 I/O 读写操作。</p>
+<p>默认为 0，表示无限制。</p>
+<h2 id="socketKeepAlive"><a href="#socketKeepAlive" class="headerlink" title="socketKeepAlive"></a><del>socketKeepAlive</del></h2><p><code>boolean</code></p>
+<p>是否启用 socket 的 keep-alive 功能。</p>
+<p>该选项从 MongoDB Java Driver 3.5.0 版开始已经废弃，现在默认值为 true，不建议禁用。</p>
+<h2 id="heartbeatFrequency"><a href="#heartbeatFrequency" class="headerlink" title="heartbeatFrequency"></a>heartbeatFrequency</h2><p><code>int</code></p>
+<p>心跳检测频率（毫秒）。该选项用于设定驱动程序每次尝试确定每个服务器当前状态的间隔时间。</p>
+<p>默认为 10,000（10秒）。</p>
+<h2 id="minHeartbeatFrequency"><a href="#minHeartbeatFrequency" class="headerlink" title="minHeartbeatFrequency"></a>minHeartbeatFrequency</h2><p><code>int</code></p>
+<p>心跳检测的最小频率（毫秒）。如果驱动程序需要经常检查服务器的可用性，那么距离上次检测至少等待这么长时间，以避免资源浪费。</p>
+<p>默认为 500。</p>
+<h2 id="heartbeatConnectTimeout"><a href="#heartbeatConnectTimeout" class="headerlink" title="heartbeatConnectTimeout"></a>heartbeatConnectTimeout</h2><p><code>int</code></p>
+<p>用于心跳检测的连接超时时间（毫秒）。</p>
+<p>默认为 20,000（20秒）。</p>
+<h2 id="heartbeatSocketTimeout"><a href="#heartbeatSocketTimeout" class="headerlink" title="heartbeatSocketTimeout"></a>heartbeatSocketTimeout</h2><p><code>int</code></p>
+<p>用于心跳检测的 socket 超时时间（毫秒）。</p>
+<p>默认为 20,000（20秒）。</p>
+<h2 id="retryWrites"><a href="#retryWrites" class="headerlink" title="retryWrites"></a>retryWrites</h2><p><code>boolean</code><br><code>Server Version: 3.6</code></p>
+<p>设定当由于网络错误而写入失败时，是否进行重试。</p>
+<h2 id="sslEnabled"><a href="#sslEnabled" class="headerlink" title="sslEnabled"></a>sslEnabled</h2><p><code>boolean</code></p>
+<p>是否启用 SSL。</p>
+<p>在未设置 socket factory 的情况下，设置该选项时将同时设置默认的 socket factory，true 时为 <code>java.net.ssl.SSLSocketFactory.getDefault()</code>，false 时为 <code>javax.net.SocketFactory.getDefault()</code>。</p>
+<p>开启该选项时，如果设置其它 socket factory，则该 factory 必须创建 <code>java.net.ssl.SSLSocket</code> 的实例，否则将拒绝连接。</p>
+<p>默认为 false，不启用。</p>
+<h2 id="sslInvalidHostNameAllowed"><a href="#sslInvalidHostNameAllowed" class="headerlink" title="sslInvalidHostNameAllowed"></a>sslInvalidHostNameAllowed</h2><p><code>boolean</code></p>
+<p>启用 SSL 时是否允许无效的主机名（证书域名检查）。true 为允许，即关闭域名检查。</p>
+<p>设为 true（允许无效主机名）将使应用程序容易受到中间人攻击。</p>
+<p>注意，证书域名检查需要 Java 7 及以上版本，如果应用程序使用了 SSL 运行在 Java 6 上，则必须将该选项设为 true（关闭域名检查）。</p>
+<p>默认为 false，即开启域名检查，不允许无效的主机名。</p>
+<h2 id="socketFactory"><a href="#socketFactory" class="headerlink" title="socketFactory"></a>socketFactory</h2><p><code>javax.net.SocketFactory</code></p>
+<p>用于建立 socket 的工厂。</p>
+<p>默认为 <code>javax.net.SocketFactory.getDefault()</code>。</p>
+<h2 id="sslContext"><a href="#sslContext" class="headerlink" title="sslContext"></a>sslContext</h2><p><code>javax.net.ssl.SSLContext</code></p>
+<p>启用 SSL 时使用的 SSLContext，当 sslEnabled 为 false 或指定了 socket factory 时，将忽略此选项。</p>
+<h2 id="requiredReplicaSetName"><a href="#requiredReplicaSetName" class="headerlink" title="requiredReplicaSetName"></a>requiredReplicaSetName</h2><p><code>java.lang.String</code></p>
+<p>指定必须的副本集名称。确保连接的所有节点都属于一个指定的副本集。</p>
+<p>设置该选项后，客户端将进行以下行为——</p>
+<ul>
+<li>以副本集模式连接，并根据给定的服务器发现副本集的所有成员。</li>
+<li>确保所有成员报告的副本集名称与指定名称匹配。</li>
+<li>如果服务器列表中的任何成员不属于该副本集，则拒绝所有请求。</li>
+</ul>
+<p>默认为 null。</p>
+<h2 id="localThreshold"><a href="#localThreshold" class="headerlink" title="localThreshold"></a>localThreshold</h2><p><code>int</code></p>
+<p>用于服务器选择的一个参考阈值，单位为毫秒。如果对于某个操作存在多个合适的服务器，则以该选项的值来确定一个基于延迟时间（RTT）的延迟窗口范围（Latency Window）。以延迟最小的服务器为基准（最小延迟时间），所有延迟时间和最小延迟时间的差值小于该值的服务器，都有资格被随机选中。</p>
+<p>如果该参数设为 0，则不使用随机算法，而是选择延迟时间最小的服务器。</p>
+<p>默认为 15 毫秒，意味着所有有资格被选中的服务器之间的延迟时间只有 15 毫秒以内的差异。</p>
+<h2 id="serverSelector"><a href="#serverSelector" class="headerlink" title="serverSelector"></a>serverSelector</h2><p><code>com.mongodb.selector.ServerSelector</code></p>
+<p>服务器选择器。用于增强标准的服务器选择规则。</p>
+<p>在执行该选择器筛选出符合要求的服务器列表后，驱动程序将继续执行以下两个选择操作——</p>
+<ol>
+<li>根据 <strong>localThreshold</strong> 选出延迟窗口范围内的服务器；</li>
+<li>继续从延迟窗口范围内的服务器随机选择一个服务器。</li>
+</ol>
+<p>要跳过基于延迟窗口的选择，可以使用以下方法——</p>
+<ul>
+<li>将 <strong>localThreshold</strong> 设置为足够高的值，以便不排除任何服务器。</li>
+<li>使该选择器返回的列表只包含单个服务器，这将使后续的选择操作没有其它服务器可选。</li>
+</ul>
+<h2 id="serverSelectionTimeout"><a href="#serverSelectionTimeout" class="headerlink" title="serverSelectionTimeout"></a>serverSelectionTimeout</h2><p><code>int</code></p>
+<p>服务器选择的超时时间（毫秒），指定驱动程序从集群中选择服务器时，无法成功而放弃并抛出异常的时间。可以根据需要（如耐心等待或快速返回错误）来设置该参数的值。</p>
+<p>默认为 30,000（30秒），这个时间对于在经典的故障恢复阶段中选举出新的主节点来说已经足够。0 表示无可用服务器，将立即超时；负值意味着无限期等待。</p>
+<h2 id="alwaysUseMBeans"><a href="#alwaysUseMBeans" class="headerlink" title="alwaysUseMBeans"></a>alwaysUseMBeans</h2><p><code>boolean</code></p>
+<p>设置驱动程序注册的 JMX Beans 是否始终为 MBeans，无论 VM 是不是 Java 6 及更高版本。</p>
+<p>当该选项为 false 时，驱动程序将在 Java 6 或更高版本时使用 MXBeans；Java 5 中使用 MBeans。</p>
+<p>默认为 false。</p>
+<h2 id="compressorList"><a href="#compressorList" class="headerlink" title="compressorList"></a>compressorList</h2><p><code>java.util.List&lt;com.mongodb.MongoCompressor&gt;</code><br><code>Server Version: 3.4</code></p>
+<p>用于向 MongoDB 服务器收发消息的压缩器列表。驱动程序将使用服务器配置支持的列表中的第一个压缩器。</p>
+<p>默认为空列表。</p>
+<h2 id="writeConcern"><a href="#writeConcern" class="headerlink" title="writeConcern"></a>writeConcern</h2><p><code>com.mongodb.WriteConcern</code></p>
+<p>写入策略，用于控制写入安全的级别，以保障写操作的可靠性。可选配置如下——</p>
+<ul>
+<li><p><strong>w</strong> - 该选项要求写入确认操作已经传递到指定数量的节点或指定标签的节点。有以下可选值——</p>
+<ul>
+<li><strong>w:0 (Unacknowledged)</strong> - 写入操作调用后立刻返回，无法知道写入是否成功。性能最好，但可靠性最差，不推荐使用。此外还有一个 <code>w:-1 (error ignored)</code> 级别，基本和 <code>w:0</code> 差不多，不同的是 <code>w:0</code> 对于网络错误会返回异常，而 <code>w:-1</code> 不会捕获任何异常。</li>
+<li><strong>w:1 (Acknowledged)</strong> - 等待实际写入操作完成后才返回响应，如果写入发生错误，可以捕获到并进行处理。该级别具备基本的可靠性，是目前的默认设置。</li>
+<li><strong>w:2 (Replica Acknowledged)</strong> - 当 secondary 节点从 primary 节点完成了复制之后返回响应。其中的数字 2 表示完成复制操作的节点数目，可以是其它 <code>&gt;=2</code> 的数字，如 <code>w:3</code> 表示至少要有 3 个节点有数据。</li>
+<li><strong>w:majority</strong> - 和 <code>w:2</code> 一样，secondary 节点从 primary 节点完成数据复制后返回响应。不同的是这里并不指定具体的节点数量，而是使用 <code>majority</code> 表示“大多数”，即超过一半（<code>&gt;1/2</code>）的节点数。</li>
+<li><strong>tag set</strong> - 指定副本集成员的标签，要求写入确认已经传递到指定 tag 标记的副本集成员后返回响应。</li>
+</ul>
+</li>
+<li><p><strong>wtimeout</strong> - 写入超时时间（毫秒）。用于设定一个时间限制，当写入过程持续超过该时间后则认为写入失败。该选项仅适用于集群环境，当指定 <code>w</code> 值大于 1 时生效。数据需要写入指定数量的节点才算成功，但如果有节点发生故障，可能导致这个数量无法达到，从而无法进行响应，通过设定这个超时时间，可以防止写入操作被无限制阻塞。该参数可以设置为 0，表示无限期。</p>
+</li>
+<li><p><strong>journal</strong> - 写入操作记录到 Journal Log 持久化之后才向客户端返回响应。该选项要求服务端开启 journaling 功能，不能与 fsync 结合使用。要记录到 Journal Log 必须等到下一次提交，可以通过增加 Journal Log 的提交频率来降低延迟。</p>
+</li>
+</ul>
+<p>默认为 w:1（<code>com.mongodb.WriteConcern.ACKNOWLEDGED</code>）。</p>
+<h2 id="readConcern"><a href="#readConcern" class="headerlink" title="readConcern"></a>readConcern</h2><p><code>com.mongodb.ReadConcern</code><br><code>Server Version: 3.2</code></p>
+<p>读取策略（隔离级别），决定集群环境中如何返回数据——</p>
+<ul>
+<li><strong>local</strong> - 直接从本地读取，不考虑数据是否已经在集群的其它节点同步，默认值。</li>
+<li><strong>majority</strong> - 只读取成功写入大多数节点的数据。</li>
+<li><strong>linearizable</strong> - <code>Server Version: 3.4</code> 版本引入。和 majority 类似，但修复了 majority 的一些 bug，但比 majority 在性能上的损耗更大。linearizable 对于同一文档的并发读、写操作时线性的。</li>
+<li><strong>snapshot</strong> - <code>Server Version: 4.0</code> 版本引入。MongoDB 从 4.0 开始支持副本集多文档事务，同时提供了 snapshot 隔离级别，在事务开始时创建一个 WiredTiger snapshot（快照），保存当时整个引擎所有事务的状态，确定哪些事务对当前可见，哪些不可见，然后在整个事务过程中使用这个快照提供事务读。</li>
+</ul>
+<p>该选项可用于解决“脏读”的问题，如从 primary 节点上读取了某条数据，但这条数据并没有同步到大多数节点，然后 primary 节点故障，重新恢复后 primary 节点会将未同步到大多数节点的数据回滚掉，导致之前读取的数据成了“脏数据”。</p>
+<p>而将 readConcern 的级别设置为 <code>majority</code>，则可以保证读取到的数据已经写入大多数节点，这些数据不会发生回滚，也就避免了“脏读”的问题。需要注意的是，该级别能保证读取到的数据不会发生回滚，但并不能保证读到的数据是最新的。</p>
+<p>该选项可以和 <strong>readPreference</strong> 配合使用。</p>
+<h2 id="readPreference"><a href="#readPreference" class="headerlink" title="readPreference"></a>readPreference</h2><p><code>com.mongodb.ReadPreference</code></p>
+<p>用于查询、Map-Reduce、聚合、计数的读取首选项。</p>
+<p>MongoDB 有 5 种 ReadPreference 模式——</p>
+<ul>
+<li><strong>primary</strong> - 主节点，默认模式，只从 primary 节点读取，如果 primary 节点不可用，则报错或抛出异常。</li>
+<li><strong>primaryPreferred</strong> - 首选主节点，优先从 primary 节点读取，如果 primary 节点不可用（如故障转移），则从 secondary 节点读取。</li>
+<li><strong>secondary</strong> - 从节点，只从 secondary 节点读取，如果 secondary 节点不可用，则报错或抛出异常。</li>
+<li><strong>secondaryPreferred</strong> - 优先从 secondary 节点读取，如果没有可用的 secondary 节点，则从 primary 节点读取。</li>
+<li><strong>nearest</strong> - 最近节点，根据网络距离从最近的节点读取，可能是 primary 节点或 secondary 节点。</li>
+</ul>
+<p>默认为 primary（<code>com.mongodb.ReadPreference.primary()</code>）。</p>
+<h2 id="cursorFinalizerEnabled"><a href="#cursorFinalizerEnabled" class="headerlink" title="cursorFinalizerEnabled"></a>cursorFinalizerEnabled</h2><p><code>boolean</code></p>
+<p>是否启用游标的 finalize 方法，用于清理客户端未关闭的 DBCursor 实例。</p>
+<p>如果能够确保每次都会调用 DBCursor 的 close 方法，则可以关闭该选项（设为 false）。</p>
+<p>默认为 true。</p>
+<h2 id="codecRegistry"><a href="#codecRegistry" class="headerlink" title="codecRegistry"></a>codecRegistry</h2><p><code>org.bson.codecs.configuration.CodecRegistry</code></p>
+<p>编解码器注册表。编解码器用于对 Document 进行编码和解码。</p>
+<h2 id="dbEncoderFactory"><a href="#dbEncoderFactory" class="headerlink" title="dbEncoderFactory"></a>dbEncoderFactory</h2><p><code>com.mongodb.DBEncoderFactory</code></p>
+<p>编码器工厂。</p>
+<p>默认使用驱动程序的标准配置。</p>
+<h2 id="dbDecoderFactory"><a href="#dbDecoderFactory" class="headerlink" title="dbDecoderFactory"></a>dbDecoderFactory</h2><p><code>com.mongodb.DBDecoderFactory</code></p>
+<p>解码器工厂。</p>
+<p>默认使用驱动程序的标准配置。</p>
+<h2 id="commandListeners"><a href="#commandListeners" class="headerlink" title="commandListeners"></a>commandListeners</h2><p><code>java.util.List&lt;com.mongodb.event.CommandListener&gt;</code></p>
+<p>命令事件监听器集合。</p>
+<p>默认为空列表。</p>
+<h2 id="clusterListeners"><a href="#clusterListeners" class="headerlink" title="clusterListeners"></a>clusterListeners</h2><p><code>java.util.List&lt;com.mongodb.event.ClusterListener&gt;</code></p>
+<p>与集群相关的事件监听器集合。</p>
+<p>默认为空列表。</p>
+<h2 id="connectionPoolListeners"><a href="#connectionPoolListeners" class="headerlink" title="connectionPoolListeners"></a>connectionPoolListeners</h2><p><code>java.util.List&lt;com.mongodb.event.ConnectionPoolListener&gt;</code></p>
+<p>与连接池相关的事件监听器集合。</p>
+<p>默认为空列表。</p>
+<h2 id="serverListeners"><a href="#serverListeners" class="headerlink" title="serverListeners"></a>serverListeners</h2><p><code>java.util.List&lt;com.mongodb.event.ServerListener&gt;</code></p>
+<p>与服务器相关的事件监听器集合。</p>
+<p>默认为空列表。</p>
+<h2 id="serverMonitorListeners"><a href="#serverMonitorListeners" class="headerlink" title="serverMonitorListeners"></a>serverMonitorListeners</h2><p><code>java.util.List&lt;com.mongodb.event.ServerMonitorListener&gt;</code></p>
+<p>与服务器监控相关的事件监听器集合。</p>
+<p>默认为空列表。</p>
+<hr>
 
-        <div class="article-info info-on-right">
+      
+
+      
+      
+        <div class="copyright">
+          <strong>本文作者：</strong>
           
+            <a href="/">Kweny</a>
+          
+          <br>
+          <strong>本文链接：</strong>
+          http://kweny.io/mongodb-client-connection-options/
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+          进行许可。转载请注明出处！
+          
+        </div>
+      
+
+        
+          <div style="text-align: center;">
+            <div style="margin-top: 20px; margin-bottom: 20px;"><strong>K栈IO 公众号：<span>KwenyIO</span></strong></div>
+            <div><img src="/assets/mp-wechat-name-card.png"></div>
+        
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/reward-alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/reward-wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -268,7 +438,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -281,123 +451,126 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
   </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/design-patterns-research-overview/" class="archive-article-date">
-  	<time datetime="2018-04-25T18:52:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/design-patterns-research-overview/">[设计模式注疏] 软件设计的质、门、道</a>
-    </h1>
-  
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://kweny.io/mongodb-client-connection-options/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/软件设计//" class="article-tag-list-link color5">软件设计</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/软件设计/设计模式注疏//" class="article-tag-list-link color2">设计模式注疏</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
-</article>
+</div></article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/real-time-financial-alerts-at-rabobank-with-apache-kafkas-streams-api/" class="archive-article-date">
-  	<time datetime="2018-04-17T14:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/carefree-mongodb-spring-boot-starter/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          [Carefree MongoDB] Spring Boot MongoDB 自动化配置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/design-patterns-research-overview/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">[设计模式注疏] 软件设计的质、门、道</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/real-time-financial-alerts-at-rabobank-with-apache-kafkas-streams-api/">[译] 流式处理：使用 Apache Kafka 的 Streams API 实现 Rabobank 的实时财务告警</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Kafka</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">架构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/系统架构//" class="article-tag-list-link color5">系统架构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#description"><span class="toc-number">1.</span> <span class="toc-text">description</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#applicationName"><span class="toc-number">2.</span> <span class="toc-text">applicationName</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#minConnectionsPerHost"><span class="toc-number">3.</span> <span class="toc-text">minConnectionsPerHost</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#maxConnectionsPerHost"><span class="toc-number">4.</span> <span class="toc-text">maxConnectionsPerHost</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#threadsAllowedToBlockForConnectionMultiplier"><span class="toc-number">5.</span> <span class="toc-text">threadsAllowedToBlockForConnectionMultiplier</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#maxWaitTime"><span class="toc-number">6.</span> <span class="toc-text">maxWaitTime</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#maxConnectionIdleTime"><span class="toc-number">7.</span> <span class="toc-text">maxConnectionIdleTime</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#maxConnectionLifeTime"><span class="toc-number">8.</span> <span class="toc-text">maxConnectionLifeTime</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#connectTimeout"><span class="toc-number">9.</span> <span class="toc-text">connectTimeout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#socketTimeout"><span class="toc-number">10.</span> <span class="toc-text">socketTimeout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#socketKeepAlive"><span class="toc-number">11.</span> <span class="toc-text">socketKeepAlive</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#heartbeatFrequency"><span class="toc-number">12.</span> <span class="toc-text">heartbeatFrequency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#minHeartbeatFrequency"><span class="toc-number">13.</span> <span class="toc-text">minHeartbeatFrequency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#heartbeatConnectTimeout"><span class="toc-number">14.</span> <span class="toc-text">heartbeatConnectTimeout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#heartbeatSocketTimeout"><span class="toc-number">15.</span> <span class="toc-text">heartbeatSocketTimeout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#retryWrites"><span class="toc-number">16.</span> <span class="toc-text">retryWrites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sslEnabled"><span class="toc-number">17.</span> <span class="toc-text">sslEnabled</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sslInvalidHostNameAllowed"><span class="toc-number">18.</span> <span class="toc-text">sslInvalidHostNameAllowed</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#socketFactory"><span class="toc-number">19.</span> <span class="toc-text">socketFactory</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sslContext"><span class="toc-number">20.</span> <span class="toc-text">sslContext</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#requiredReplicaSetName"><span class="toc-number">21.</span> <span class="toc-text">requiredReplicaSetName</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#localThreshold"><span class="toc-number">22.</span> <span class="toc-text">localThreshold</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#serverSelector"><span class="toc-number">23.</span> <span class="toc-text">serverSelector</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#serverSelectionTimeout"><span class="toc-number">24.</span> <span class="toc-text">serverSelectionTimeout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#alwaysUseMBeans"><span class="toc-number">25.</span> <span class="toc-text">alwaysUseMBeans</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#compressorList"><span class="toc-number">26.</span> <span class="toc-text">compressorList</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#writeConcern"><span class="toc-number">27.</span> <span class="toc-text">writeConcern</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#readConcern"><span class="toc-number">28.</span> <span class="toc-text">readConcern</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#readPreference"><span class="toc-number">29.</span> <span class="toc-text">readPreference</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cursorFinalizerEnabled"><span class="toc-number">30.</span> <span class="toc-text">cursorFinalizerEnabled</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#codecRegistry"><span class="toc-number">31.</span> <span class="toc-text">codecRegistry</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dbEncoderFactory"><span class="toc-number">32.</span> <span class="toc-text">dbEncoderFactory</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dbDecoderFactory"><span class="toc-number">33.</span> <span class="toc-text">dbDecoderFactory</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#commandListeners"><span class="toc-number">34.</span> <span class="toc-text">commandListeners</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#clusterListeners"><span class="toc-number">35.</span> <span class="toc-text">clusterListeners</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#connectionPoolListeners"><span class="toc-number">36.</span> <span class="toc-text">connectionPoolListeners</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#serverListeners"><span class="toc-number">37.</span> <span class="toc-text">serverListeners</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#serverMonitorListeners"><span class="toc-number">38.</span> <span class="toc-text">serverMonitorListeners</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -420,8 +593,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
