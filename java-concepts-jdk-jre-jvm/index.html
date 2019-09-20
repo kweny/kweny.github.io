@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="K栈">
 <meta property="og:description" content="JVMJVM 全称 Java Virtual Mechinal，即 Java 虚拟机。JVM 是驻留于内存中的抽象计算机，可以理解为一个虚拟的计算机，它是通过在真实计算机上仿真模拟各种计算机功能来实现的，具有处理器、堆栈、寄存器等完善的硬件架构以及相应的指令系统，通过抽象 CPU 和操作系统结构，使代码的执行与主机硬件、主机操作系统无关。 JVM 关注的是 Java 字节码文件（类文件 .clas">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-20T15:58:21.479Z">
+<meta property="og:updated_time" content="2019-09-20T16:06:37.821Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 领域概念：JDK、JRE、JVM">
 <meta name="twitter:description" content="JVMJVM 全称 Java Virtual Mechinal，即 Java 虚拟机。JVM 是驻留于内存中的抽象计算机，可以理解为一个虚拟的计算机，它是通过在真实计算机上仿真模拟各种计算机功能来实现的，具有处理器、堆栈、寄存器等完善的硬件架构以及相应的指令系统，通过抽象 CPU 和操作系统结构，使代码的执行与主机硬件、主机操作系统无关。 JVM 关注的是 Java 字节码文件（类文件 .clas">
@@ -210,8 +210,8 @@
         <h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><p>JVM 全称 Java Virtual Mechinal，即 Java 虚拟机。JVM 是驻留于内存中的抽象计算机，可以理解为一个虚拟的计算机，它是通过在真实计算机上仿真模拟各种计算机功能来实现的，具有处理器、堆栈、寄存器等完善的硬件架构以及相应的指令系统，通过抽象 CPU 和操作系统结构，使代码的执行与主机硬件、主机操作系统无关。</p>
 <p>JVM 关注的是 Java 字节码文件（类文件 <code>.class</code>），Java 字节码文件由 JVM 指令集、符号表以及一些补充信息组成。JVM 的主要工作是将 Java 字节码解释为本地机器码，实际就是将自己的指令集（Java 字节码）映射为本地 CPU 的指令集或操作系统的接口调用（本地机器码）。</p>
 <p>Java 语言的跨平台性，其实就是靠不同平台版本的 JVM 来实现的。不同的操作系统，使用不同的 JVM 映射规则，使 Java 字节码的解释执行与操作系统无关，从而完成跨平台（一次编译，到处执行）。也就是说，能跨平台的是 Java 程序，而 JVM 是不能跨平台的，对于不同的操作系统平台有不同的 JVM 实现，Java 程序的跨平台性就是通过 JVM 的<strong>不</strong>跨平台实现的。</p>
-<p>JVM 主要包含了以下组件：</p>
 <a id="more"></a>
+<p>JVM 主要包含了以下组件：</p>
 <ul>
 <li><p><strong>类加载器</strong>：将类文件 <code>.class</code> 加载到内存中。</p>
 </li>
@@ -224,11 +224,11 @@
 </ul>
 <p>JVM 除了跨平台意义上的不同实现之外，还有很多不同的发行版，每个发行版通常都会有不同平台的实现。这些不同的发行版往往会有不同的特性，或针对不同的领域。</p>
 <ul>
-<li><p><strong>HotSpot VM</strong>：这是最主流的 JVM 实现，可以说是“标准 JVM”，Oracle JDK 以及 OpenJDK 的各种变种版本——如 AdoptOpenJDK、Zulu、IcedTea 等——用的都是 HotSpot VM。</p>
+<li><p><strong><a href="https://www.oracle.com/technetwork/java/javase/tech/index-jsp-136373.html" target="_blank" rel="noopener">HotSpot VM</a></strong>：这是最主流的 JVM 实现，可以说是“标准 JVM”，Oracle JDK 以及 OpenJDK 的各种变种版本——如 AdoptOpenJDK、Zulu、IcedTea 等——用的都是 HotSpot VM。</p>
 </li>
-<li><p><strong>OpenJ9 VM</strong>：OpenJ9 最初由 IBM 开发，定位是企业级的开源 JVM，2017 年托管至 <a href="]https://www.eclipse.org/openj9/">Eclipse 基金会</a>并在 <a href="https://github.com/eclipse/openj9" target="_blank" rel="noopener">GitHub</a> 上开源。</p>
+<li><p><strong><a href="https://www.eclipse.org/openj9/" target="_blank" rel="noopener">OpenJ9 VM</a></strong>：OpenJ9 最初由 IBM 开发，定位是企业级的开源 JVM，2017 年托管至 <a href="]https://www.eclipse.org/openj9/">Eclipse 基金会</a>并在 <a href="https://github.com/eclipse/openj9" target="_blank" rel="noopener">GitHub</a> 上开源。</p>
 </li>
-<li><p><strong>Zing VM</strong>：Azul 在 2010 年发布的 JVM，在 HotSpot VM 基础上做了很多定制和优化工作。</p>
+<li><p><strong><a href="https://www.azul.com/products/zing/" target="_blank" rel="noopener">Zing VM</a></strong>：Azul 在 2010 年发布的 JVM，在 HotSpot VM 基础上做了很多定制和优化工作。</p>
 </li>
 </ul>
 <p>上述 JVM 主要是在 JSE / JEE 领域的主流选择，而针对 JME 领域及 Android 或 Android 兼容系统也有诸如 CLDC-HI、JavaCard、Sun SPOT、OpenJ9（OpenJ9 是一个高度模块化的 JVM，在嵌入式、JME 领域都可以应对）等实现。此外还有一些研究性质的 JVM，如 Graal VM、Jikes RVM、Maxine VM 等。</p>
@@ -583,11 +583,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -599,7 +599,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color1">Kafka</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -612,10 +612,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JVM</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Kafka</a>
               </li>
             
             <div class="clearfix"></div>
