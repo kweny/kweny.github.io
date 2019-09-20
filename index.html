@@ -57,6 +57,8 @@
 	        
 				<li><a href="/categories/开源软件/">开源软件</a></li>
 	        
+				<li><a href="/categories/Java/">Java</a></li>
+	        
 				<li><a href="/categories/软件设计/">软件设计</a></li>
 	        
 				<li><a href="/categories/系统架构/">系统架构</a></li>
@@ -133,6 +135,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -153,15 +157,17 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 20%"><a href="/">主页</a></li>
+					<li style="width: 16.666666666666668%"><a href="/">主页</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/开源软件/">开源软件</a></li>
+					<li style="width: 16.666666666666668%"><a href="/categories/开源软件/">开源软件</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/软件设计/">软件设计</a></li>
+					<li style="width: 16.666666666666668%"><a href="/categories/Java/">Java</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/系统架构/">系统架构</a></li>
+					<li style="width: 16.666666666666668%"><a href="/categories/软件设计/">软件设计</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/笔记手册/">笔记手册</a></li>
+					<li style="width: 16.666666666666668%"><a href="/categories/系统架构/">系统架构</a></li>
+		        
+					<li style="width: 16.666666666666668%"><a href="/categories/笔记手册/">笔记手册</a></li>
 		        
 				</ul>
 			</nav>
@@ -177,6 +183,107 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-java-concepts-jdk-jre-jvm" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/java-concepts-jdk-jre-jvm/">Java 领域概念：JDK、JRE、JVM</a>
+    </h1>
+  
+
+        
+        <a href="/java-concepts-jdk-jre-jvm/" class="archive-article-date">
+  	<time datetime="2019-09-20T15:48:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><p>JVM 全称 Java Virtual Mechinal，即 Java 虚拟机。JVM 是驻留于内存中的抽象计算机，可以理解为一个虚拟的计算机，它是通过在真实计算机上仿真模拟各种计算机功能来实现的，具有处理器、堆栈、寄存器等完善的硬件架构以及相应的指令系统，通过抽象 CPU 和操作系统结构，使代码的执行与主机硬件、主机操作系统无关。</p>
+<p>JVM 关注的是 Java 字节码文件（类文件 <code>.class</code>），Java 字节码文件由 JVM 指令集、符号表以及一些补充信息组成。JVM 的主要工作是将 Java 字节码解释为本地机器码，实际就是将自己的指令集（Java 字节码）映射为本地 CPU 的指令集或操作系统的接口调用（本地机器码）。</p>
+<p>Java 语言的跨平台性，其实就是靠不同平台版本的 JVM 来实现的。不同的操作系统，使用不同的 JVM 映射规则，使 Java 字节码的解释执行与操作系统无关，从而完成跨平台（一次编译，到处执行）。也就是说，能跨平台的是 Java 程序，而 JVM 是不能跨平台的，对于不同的操作系统平台有不同的 JVM 实现，Java 程序的跨平台性就是通过 JVM 的<strong>不</strong>跨平台实现的。</p>
+<p>JVM 主要包含了以下组件：</p>
+        
+          <a class="article-more-a" href="/java-concepts-jdk-jre-jvm/#more">展开全文 >></a>
+        
+      
+
+      
+      
+        <div class="copyright" hidden="hidden"></div>
+      
+
+        
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JDK</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JRE</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-carefree-mongodb-spring-boot-starter" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
@@ -565,7 +672,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 Kweny
+    		&copy; 2019 Kweny
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -666,11 +773,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -679,6 +786,22 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Carefree</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JDK</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JRE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JVM</a>
               </li>
              
               <li class="article-tag-list-item">

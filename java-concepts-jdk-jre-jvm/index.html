@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://kweny.io">
-  <title>Archives | K栈</title>
+  <title>Java 领域概念：JDK、JRE、JVM | K栈</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="K栈">
-<meta property="og:url" content="http://kweny.io/archives/index.html">
+  <meta name="description" content="JVMJVM 全称 Java Virtual Mechinal，即 Java 虚拟机。JVM 是驻留于内存中的抽象计算机，可以理解为一个虚拟的计算机，它是通过在真实计算机上仿真模拟各种计算机功能来实现的，具有处理器、堆栈、寄存器等完善的硬件架构以及相应的指令系统，通过抽象 CPU 和操作系统结构，使代码的执行与主机硬件、主机操作系统无关。 JVM 关注的是 Java 字节码文件（类文件 .clas">
+<meta name="keywords" content="JDK,JRE,JVM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 领域概念：JDK、JRE、JVM">
+<meta property="og:url" content="http://kweny.io/java-concepts-jdk-jre-jvm/index.html">
 <meta property="og:site_name" content="K栈">
+<meta property="og:description" content="JVMJVM 全称 Java Virtual Mechinal，即 Java 虚拟机。JVM 是驻留于内存中的抽象计算机，可以理解为一个虚拟的计算机，它是通过在真实计算机上仿真模拟各种计算机功能来实现的，具有处理器、堆栈、寄存器等完善的硬件架构以及相应的指令系统，通过抽象 CPU 和操作系统结构，使代码的执行与主机硬件、主机操作系统无关。 JVM 关注的是 Java 字节码文件（类文件 .clas">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-20T15:58:21.479Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="K栈">
+<meta name="twitter:title" content="Java 领域概念：JDK、JRE、JVM">
+<meta name="twitter:description" content="JVMJVM 全称 Java Virtual Mechinal，即 Java 虚拟机。JVM 是驻留于内存中的抽象计算机，可以理解为一个虚拟的计算机，它是通过在真实计算机上仿真模拟各种计算机功能来实现的，具有处理器、堆栈、寄存器等完善的硬件架构以及相应的指令系统，通过抽象 CPU 和操作系统结构，使代码的执行与主机硬件、主机操作系统无关。 JVM 关注的是 Java 字节码文件（类文件 .clas">
   
     <link rel="alternative" href="/atom.xml" title="K栈" type="application/atom+xml">
   
@@ -182,36 +187,149 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-java-concepts-jdk-jre-jvm" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/java-concepts-jdk-jre-jvm/" class="archive-article-date">
-  	<time datetime="2019-09-20T15:48:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/java-concepts-jdk-jre-jvm/">Java 领域概念：JDK、JRE、JVM</a>
+    <h1 class="article-title" itemprop="name">
+      Java 领域概念：JDK、JRE、JVM
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/java-concepts-jdk-jre-jvm/" class="archive-article-date">
+  	<time datetime="2019-09-20T15:48:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><p>JVM 全称 Java Virtual Mechinal，即 Java 虚拟机。JVM 是驻留于内存中的抽象计算机，可以理解为一个虚拟的计算机，它是通过在真实计算机上仿真模拟各种计算机功能来实现的，具有处理器、堆栈、寄存器等完善的硬件架构以及相应的指令系统，通过抽象 CPU 和操作系统结构，使代码的执行与主机硬件、主机操作系统无关。</p>
+<p>JVM 关注的是 Java 字节码文件（类文件 <code>.class</code>），Java 字节码文件由 JVM 指令集、符号表以及一些补充信息组成。JVM 的主要工作是将 Java 字节码解释为本地机器码，实际就是将自己的指令集（Java 字节码）映射为本地 CPU 的指令集或操作系统的接口调用（本地机器码）。</p>
+<p>Java 语言的跨平台性，其实就是靠不同平台版本的 JVM 来实现的。不同的操作系统，使用不同的 JVM 映射规则，使 Java 字节码的解释执行与操作系统无关，从而完成跨平台（一次编译，到处执行）。也就是说，能跨平台的是 Java 程序，而 JVM 是不能跨平台的，对于不同的操作系统平台有不同的 JVM 实现，Java 程序的跨平台性就是通过 JVM 的<strong>不</strong>跨平台实现的。</p>
+<p>JVM 主要包含了以下组件：</p>
+<a id="more"></a>
+<ul>
+<li><p><strong>类加载器</strong>：将类文件 <code>.class</code> 加载到内存中。</p>
+</li>
+<li><p><strong>字节码验证工具</strong>：检查代码中是否存在访问限制违规。</p>
+</li>
+<li><p><strong>执行引擎</strong>：将字节码转换为可执行的机器码。</p>
+</li>
+<li><p><strong>JIT</strong>：Just-In-Time，即时编译，用于提高 JVM 的性能，加快 Java 程序的执行速度。</p>
+</li>
+</ul>
+<p>JVM 除了跨平台意义上的不同实现之外，还有很多不同的发行版，每个发行版通常都会有不同平台的实现。这些不同的发行版往往会有不同的特性，或针对不同的领域。</p>
+<ul>
+<li><p><strong>HotSpot VM</strong>：这是最主流的 JVM 实现，可以说是“标准 JVM”，Oracle JDK 以及 OpenJDK 的各种变种版本——如 AdoptOpenJDK、Zulu、IcedTea 等——用的都是 HotSpot VM。</p>
+</li>
+<li><p><strong>OpenJ9 VM</strong>：OpenJ9 最初由 IBM 开发，定位是企业级的开源 JVM，2017 年托管至 <a href="]https://www.eclipse.org/openj9/">Eclipse 基金会</a>并在 <a href="https://github.com/eclipse/openj9" target="_blank" rel="noopener">GitHub</a> 上开源。</p>
+</li>
+<li><p><strong>Zing VM</strong>：Azul 在 2010 年发布的 JVM，在 HotSpot VM 基础上做了很多定制和优化工作。</p>
+</li>
+</ul>
+<p>上述 JVM 主要是在 JSE / JEE 领域的主流选择，而针对 JME 领域及 Android 或 Android 兼容系统也有诸如 CLDC-HI、JavaCard、Sun SPOT、OpenJ9（OpenJ9 是一个高度模块化的 JVM，在嵌入式、JME 领域都可以应对）等实现。此外还有一些研究性质的 JVM，如 Graal VM、Jikes RVM、Maxine VM 等。</p>
+<h3 id="JRE"><a href="#JRE" class="headerlink" title="JRE"></a>JRE</h3><p>JRE 全称 Java Runtime Environment，即 Java 运行时环境，由运行和管理 Java 应用程序的类库和工具组成。</p>
+<p>JRE 中包含了 JVM，单纯的 JVM 不能运行 Java 程序，JVM 在解释 Java 字节码时需要用到一些核心类库，这些核心类库就被包含在 JRE 中，简单来说 JRE 就是 JVM + 核心类库。</p>
+<p>除了 JVM 和 核心类库之外，通常的 JRE 发行版中还会包含一些其它的工具和命令，如 密钥库工具 <code>keytool</code>、安全策略管理工具 <code>policytool</code>、jar 文件解压缩工具 <code>pack200/unpack200</code> 等。</p>
+<h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p>JDK 全称 Java Development Kit，即 Java 开发工具包，是面向 Java 开发人员使用的 SDK（Software Development Kit，软件开发工具包），提供了 Java 程序的开发环境和运行环境。</p>
+<p>JDK 包含了 JRE、基础类库（Java API，如网络、IO、线程、图形等）、Java 源码编译器 <code>javac</code>、以及其它的一系列用于开发、诊断、分析、调试、管理的工具和命令，如 <code>jar</code>、<code>javah</code>、<code>native2ascii</code>、<code>jdb</code>、<code>jconsole</code>、<code>jstat</code>、<code>jps</code>、<code>jmap</code>、<code>jhat</code> 等。</p>
+<blockquote>
+<p>从 Java 11 开始，安装 JDK 时不会直接安装 JRE，需要用户自行选择安装 JRE 模块，可以使用 <code>jlink</code> 程序生成，如：<code>bin\jlink.exe --module-path jmods --add-modules java.desktop --output jre</code> 。</p>
+</blockquote>
+<p>JDK 有多个构建版本，而实际只有一组源代码，即 OpenJDK，使用分布式版本控制系统 Mercurial 托管在 <a href="http://openjdk.java.net/projects/jdk/" target="_blank" rel="noopener">OpenJDK</a>。任何人都可以获取这些源码，并用其构建一个变种版本进行发布。当然需要一个独有的认证程序来确保构建的变种版本是有效的，这个认证程序是由 <a href="https://www.jcp.org/en/home/index" target="_blank" rel="noopener">JCP（Java Community Process）</a>组织审核的，该组织会提供一套技术兼容性工具包 TCK（Technology Conformance Kit）。如果你构建了一个 OpenJDK 的变种版本，并通过了 TCK 的兼容性测试，则可以将该变种版本称为“Java SE Compatible”（兼容 Java SE 的 JDK）。</p>
+<p>下面是一些主流的 OpenJDK 构建版本——</p>
+<ul>
+<li><p><strong><a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">Oracle JDK</a></strong>：就是之前的 Sun JDK，被 Oracle 收购后命名为 Oracle JDK，由 Oracle 的团队维护。从 Java 11 开始提供付费的商业支持，当然个人或非商业用途仍然可以享受免费支持。但现阶段还没有单独针对 Oracle JDK 的付费策略，基本是和 Oracle 的其它商业产品绑定，Oracle 计划在 2026 年后提供全额付费的服务支持。</p>
+</li>
+<li><p><strong><a href="http://openjdk.java.net/" target="_blank" rel="noopener">Oracle OpenJDK</a></strong>：免费的 OpenJDK 版本，基于 GPL 协议开源，允许直接用于商业环境。Oracle 提交的源代码衍生出 Oracle JDK 和 Oracle OpenJDK 不同的编译版本，从 Java 11 开始，两者的特性差异已经最小化，差异部分大多是 Oracle 的商业特性。但 Oracle OpenJDK 大版本发布后，Oracle 对其最多会有两次安全补丁的升级（发布后的六个月内），之后不再负责该大版本维护，如果用户想持续获得安全升级，需要及时更新到新的大版本。由于 Oracle OpenJDK 是开源的，因此可以直接基于源码编译出社区版 JDK，甚至可以加入自定义特性并商业化。</p>
+<p>  <em>值得一提的是，在安全补丁级别相同的情况下，Oracle JDK 并不比 OpenJDK 更好。如果不需要商业支持或企业管理工具，可以选择使用 Oracle OpenJDK 构建版本。</em></p>
+</li>
+<li><p><strong><a href="https://adoptopenjdk.net/?jvmVariant=hotspot" target="_blank" rel="noopener">AdoptOpenJDK</a></strong>：一个由社区驱动的项目，基于 GPL 开源协议，以免费软件的形式提供社区版 OpenJDK 二进制包，与 Oracle OpenJDK 不同的是，该发行版会长期提供安全及其它补丁的更新，和 Java 11 一样，至少提供 4 年的免费长期支持（LTS）计划。IBM 和 Red Hat 也曾表示提供相关安全补丁。</p>
+</li>
+<li><p><strong><a href="https://adoptopenjdk.net/?jvmVariant=openj9" target="_blank" rel="noopener">AdoptOpenJDK OpenJ9</a></strong>：除了标准的 OpenJDK 构建外，AdoptOpenJDK 还提供了使用 OpenJ9 VM 的版本。OpenJ9 是最初由 IBM 实现的 JVM，现在由 <a href="https://www.eclipse.org/openj9/" target="_blank" rel="noopener">Eclipse 基金会</a> 运作，并在 <a href="https://github.com/eclipse/openj9" target="_blank" rel="noopener">GitHub</a> 上开源。。</p>
+</li>
+<li><p><strong><a href="https://developers.redhat.com/products/openjdk/download" target="_blank" rel="noopener">Red Hat OpenJDK</a></strong>：这是 Red Hat 提供的一个 OpenJDK 构建版本，提供商业付费支持，它通常被集成在 Red Hat 的操作系统中（RHEL, Red Hat Enterprise Linux）。</p>
+</li>
+<li><p><strong><a href="https://www.azul.com/downloads/zulu-community/" target="_blank" rel="noopener">Azul Zulu</a></strong>：一个 OpenJDK 的免费版本，同时也提供商业付费支持。</p>
+</li>
+<li><p><strong><a href="https://developer.ibm.com/javasdk/downloads/" target="_blank" rel="noopener">IBM JDK</a></strong>：IBM 为 Java 8 及更早版本提供支持，另外 IBM 还为 AdoptOpenJDK OpenJ9 版本提供商业付费支持。</p>
+</li>
+</ul>
+<p>除了上面所述之外，还有其它很多不同的构建版本，如阿里巴巴的 <a href="https://github.com/alibaba/dragonwell8" target="_blank" rel="noopener">Dragonwell</a>，AWS 的 <a href="https://aws.amazon.com/cn/corretto/" target="_blank" rel="noopener">Corretto</a> 等，此外不同的 Linux 发行版也会使用不同的方式内置 OpenJDK，如 <a href="https://help.ubuntu.com/community/Java" target="_blank" rel="noopener">Ubuntu</a>、<a href="https://wiki.debian.org/Java#Java_and_Debian" target="_blank" rel="noopener">Debian</a>、<a href="https://fedoraproject.org/wiki/Java#Java_packages_in_Fedora" target="_blank" rel="noopener">Fedora</a>、<a href="https://wiki.archlinux.org/index.php/java#Officially_supported_packages" target="_blank" rel="noopener">Arch</a> 等，而如果要追求“标准”，最好的建议是使用 Oracle OpenJDK、AdoptOpenJDk 以及 Linux 发行版中内置的构建版本。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><p><a href="https://hllvm-group.iteye.com/group/topic/17147" target="_blank" rel="noopener">https://hllvm-group.iteye.com/group/topic/17147</a></p>
+</li>
+<li><p><a href="https://www.oschina.net/news/99836/time-to-look-beyond-oracles-jdk" target="_blank" rel="noopener">https://www.oschina.net/news/99836/time-to-look-beyond-oracles-jdk</a></p>
+</li>
+</ul>
+
+      
+
+      
+      
+        <div class="copyright">
+          <strong>本文作者：</strong>
           
+            <a href="/">Kweny</a>
+          
+          <br>
+          <strong>本文链接：</strong>
+          <a href="http://kweny.io/java-concepts-jdk-jre-jvm/">http://kweny.io/java-concepts-jdk-jre-jvm/</a>
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>
+          进行许可。转载请注明出处。
+          
+        </div>
+      
+
+        
+          <div style="text-align: center;">
+            <div style="margin-top: 20px; margin-bottom: 20px;"><strong>K栈IO 公众号：<span>KwenyIO</span></strong></div>
+            <div><img src="/assets/mp-wechat-name-card.png"></div>
+        
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/reward-alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/reward-wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -231,7 +349,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -244,235 +362,117 @@
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://kweny.io/java-concepts-jdk-jre-jvm/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/carefree-mongodb-spring-boot-starter/" class="archive-article-date">
-  	<time datetime="2018-09-20T12:31:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/carefree-mongodb-spring-boot-starter/">[Carefree MongoDB] Spring Boot MongoDB 自动化配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MongoDB</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Carefree</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/开源软件//" class="article-tag-list-link color5">开源软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
-</article>
+</div></article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/mongodb-client-connection-options/" class="archive-article-date">
-  	<time datetime="2018-09-12T18:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/carefree-mongodb-spring-boot-starter/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">[Carefree MongoDB] Spring Boot MongoDB 自动化配置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/mongodb-client-connection-options/">MongoDB 客户端连接选项</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MongoDB</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/笔记手册//" class="article-tag-list-link color5">笔记手册</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JVM"><span class="toc-number">1.</span> <span class="toc-text">JVM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JRE"><span class="toc-number">2.</span> <span class="toc-text">JRE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK"><span class="toc-number">3.</span> <span class="toc-text">JDK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/design-patterns-research-overview/" class="archive-article-date">
-  	<time datetime="2018-04-25T18:52:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/design-patterns-research-overview/">[设计模式注疏] 软件设计的质、门、道</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/软件设计//" class="article-tag-list-link color5">软件设计</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/软件设计/设计模式注疏//" class="article-tag-list-link color2">设计模式注疏</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/real-time-financial-alerts-at-rabobank-with-apache-kafkas-streams-api/" class="archive-article-date">
-  	<time datetime="2018-04-17T14:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/real-time-financial-alerts-at-rabobank-with-apache-kafkas-streams-api/">[译] 流式处理：使用 Apache Kafka 的 Streams API 实现 Rabobank 的实时财务告警</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Kafka</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/系统架构//" class="article-tag-list-link color5">系统架构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -495,8 +495,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
