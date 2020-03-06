@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://kweny.io/figures/rabobank-raboalerts_mobile-banking.png">
 <meta property="og:image" content="http://kweny.io/figures/rabobank-raboalerts_alerting-topology-flow.jpg">
-<meta property="og:updated_time" content="2018-11-24T21:57:20.727Z">
+<meta property="og:updated_time" content="2020-03-06T20:15:30.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[译] 流式处理：使用 Apache Kafka 的 Streams API 实现 Rabobank 的实时财务告警">
 <meta name="twitter:description" content="原文：Real-time Financial Alerts at Rabobank with Apache Kafka’s Streams API原作者：Jeroen van Disseldorp 本文讨论使用 Apache Kafka 的 Streams API 向 Rabobank 的客户发送告警。Rabobank（荷兰合作银行）总部位于荷兰，在全球拥有 900 多个分支机构，48,000 名">
@@ -219,7 +219,7 @@
         <p>原文：<a href="https://www.confluent.io/blog/real-time-financial-alerts-rabobank-apache-kafkas-streams-api/" target="_blank" rel="noopener">Real-time Financial Alerts at Rabobank with Apache Kafka’s Streams API</a><br>原作者：<a href="https://www.confluent.io/blog/author/jeroen/" target="_blank" rel="noopener">Jeroen van Disseldorp</a></p>
 <p><em>本文讨论使用 Apache Kafka 的 Streams API 向 Rabobank 的客户发送告警。Rabobank（荷兰合作银行）总部位于荷兰，在全球拥有 900 多个分支机构，48,000 名员工和 681 亿欧元的资产。Rabobank 是一家由客户和银行组成的合作银行，一家对社会负责的银行。其目标是成为荷兰金融市场的领导者。Rabobank 还致力于成为全球食品和农业领域的领先银行。Rabobank 向全球数百万客户提供金融产品和服务。</em></p>
 <a id="more"></a>
-<p>在过去的几年中，Rabobank 一直在为成为一家实时的，事件驱动的银行而进行积极的投资。如果你熟悉银行的业务流程，应该会明白这并不能一蹴而就。许多银行业务流程都是在非商用硬件上以批处理作业的形式进行的，因此迁移工作非常艰巨。但如前所述，Rabobank 接受了这一挑战<br>，并定义了一个<a href="https://www.slideshare.net/JeroenvanDisseldorpM/kafka-utrecht-meetup" target="_blank" rel="noopener">业务事件总线</a>（BEB，Business Event Bus），用于应用程序之间共享整个组织架构的业务事件。<br>Rabobank 选择 Apache Kafka 作为底层的主要引擎，并编写了自己的的 BEB 客户端库，以方便应用程序开发人员使用简单的消息生产/消费以及灾难恢复等功能。</p>
+<p>在过去的几年中，Rabobank 一直在为成为一家实时的，事件驱动的银行而进行积极的投资。如果你熟悉银行的业务流程，应该会明白这并不能一蹴而就。许多银行业务流程都是在非商用硬件上以批处理作业的形式进行的，因此迁移工作非常艰巨。但如前所述，Rabobank 接受了这一挑战，并定义了一个<a href="https://www.slideshare.net/JeroenvanDisseldorpM/kafka-utrecht-meetup" target="_blank" rel="noopener">业务事件总线</a>（BEB，Business Event Bus），用于应用程序之间共享整个组织架构的业务事件。<br>Rabobank 选择 Apache Kafka 作为底层的主要引擎，并编写了自己的的 BEB 客户端库，以方便应用程序开发人员使用简单的消息生产/消费以及灾难恢复等功能。</p>
 <p>Rabobank 采用 <a href="https://drive.google.com/file/d/0BwQ3-QDawhABek5hVWNzbXZ3dFU/view" target="_blank" rel="noopener"><code>Active-Active</code> 的 Kafka 设置</a>，Kafka 集群在多个数据中心进行对称镜像。当数据中心出现故障或由操作人员干预后，BEB 客户端（包括本文讨论的基于 Kafka Streams 的应用程序）会切换到另一个 Kafka 集群，而无需重新启动。实现在灾难情景和计划维护时段内的 24×7 不间断运行。BEB 客户端库为生产者、消费者以及流式应用提供了这种切换机制。</p>
 <p><strong>Rabo Alerts</strong> 是一个由一系列生产、消费、流式消息等微服务组成的系统，基于 BEB 实现。下面讨论的所有数据类型和代码都可以在 <a href="https://github.com/Axual/rabo-alerts-blog-post" target="_blank" rel="noopener">GitHub</a> 中找到。本文将在一定程度上简化源码清单（如删除未使用的字段），但这些清单仍反映了生产中实际运行的代码。</p>
 <h2 id="案例：Rabo-Alerts"><a href="#案例：Rabo-Alerts" class="headerlink" title="案例：Rabo Alerts"></a>案例：Rabo Alerts</h2><p>Rabo Alerts 服务可以让 Rabobank 的客户接收其关注的财务事件告警。例如某笔款项从账户中扣除或者记入账户，以及其它更复杂的事件。客户可以根据自己的偏好配置告警，并通过第三方渠道发送：如电子邮件、短信和移动推送通知。值得一提的是，Rabo Alerts 并不是一项新的或试用服务，它已经投产十多年，可供数百万账户持有者使用。</p>
@@ -643,11 +643,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
